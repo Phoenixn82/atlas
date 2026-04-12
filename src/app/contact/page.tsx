@@ -10,8 +10,24 @@ export const metadata: Metadata = {
 }
 
 export default function ContactPage() {
+  const localBusinessSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'LocalBusiness',
+    name: 'ATLAS',
+    description: 'Web design and SEO agency.',
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://atlasagency.com',
+    telephone: '+1-555-123-4567',
+    email: 'hello@atlasagency.com',
+    openingHours: 'Mo-Fr 09:00-18:00',
+    priceRange: '$$$',
+  }
+
   return (
     <div className="pt-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+      />
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-24">
         <SectionReveal>
           <h1

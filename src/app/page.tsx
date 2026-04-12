@@ -13,8 +13,19 @@ export const metadata: Metadata = {
 }
 
 export default function HomePage() {
+  const websiteSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'ATLAS',
+    url: SITE_URL,
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+      />
       <HeroSection />
       <ServicesOverview />
       <PortfolioPreview />

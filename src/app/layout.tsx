@@ -28,12 +28,30 @@ export const metadata: Metadata = {
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
+  const organizationSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'ATLAS',
+    url: process.env.NEXT_PUBLIC_SITE_URL ?? 'https://atlasagency.com',
+    logo: `${process.env.NEXT_PUBLIC_SITE_URL ?? 'https://atlasagency.com'}/og-image.png`,
+    contactPoint: {
+      '@type': 'ContactPoint',
+      telephone: '+1-555-123-4567',
+      contactType: 'customer service',
+      email: 'hello@atlasagency.com',
+    },
+  }
+
   return (
     <html lang="en" id="top">
       <body
         className={`${ibmPlexMono.variable} font-mono antialiased`}
         style={{ backgroundColor: 'var(--atlas-white)', color: 'var(--atlas-black)' }}
       >
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
         <Navigation />
         <main>{children}</main>
         <Footer />
