@@ -1,3 +1,5 @@
+'use client'
+
 import Link from 'next/link'
 import { AtlasFigure } from '@/components/atlas/AtlasFigure'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
