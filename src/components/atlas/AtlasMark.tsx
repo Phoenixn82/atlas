@@ -187,17 +187,19 @@ export function AtlasMark({
       <circle cx="105" cy="52" r="1.2" fill="currentColor" stroke="none" />
 
       {/* — LOWER HALF — */}
-      {/* Main sphere */}
-      <circle cx="60" cy="82" r="17" strokeWidth="1.5" />
-      {/* Orbital ring */}
-      <ellipse cx="60" cy="82" rx="28" ry="8" strokeWidth="1.2" />
-      {/* Sphere latitude lines */}
-      <ellipse cx="60" cy="82" rx="17" ry="6" strokeWidth="0.7" />
-      <ellipse cx="60" cy="76" rx="13" ry="4" strokeWidth="0.5" />
-      {/* Sphere meridian line */}
-      <line x1="60" y1="65" x2="60" y2="99" strokeWidth="0.8" />
-      {/* Sphere equator */}
-      <line x1="43" y1="82" x2="77" y2="82" strokeWidth="0.7" />
+      <g className="atlas-mark-earth">
+        {/* Main sphere */}
+        <circle cx="60" cy="82" r="17" strokeWidth="1.5" />
+        {/* Orbital ring */}
+        <ellipse cx="60" cy="82" rx="28" ry="8" strokeWidth="1.2" />
+        {/* Sphere latitude lines */}
+        <ellipse cx="60" cy="82" rx="17" ry="6" strokeWidth="0.7" />
+        <ellipse cx="60" cy="76" rx="13" ry="4" strokeWidth="0.5" />
+        {/* Sphere meridian line */}
+        <line x1="60" y1="65" x2="60" y2="99" strokeWidth="0.8" />
+        {/* Sphere equator */}
+        <line x1="43" y1="82" x2="77" y2="82" strokeWidth="0.7" />
+      </g>
 
       {/* Circular arc text lower — established date */}
       <text

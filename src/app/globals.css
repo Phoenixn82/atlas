@@ -79,3 +79,12 @@ button {
 .transition-interactive {
   transition: border-color 150ms ease, color 150ms ease, background-color 150ms ease;
 }
+
+.atlas-mark-earth {
+  transition: stroke 150ms ease;
+  cursor: default;
+}
+
+.atlas-mark-earth:hover {
+  stroke: var(--atlas-red);
+}
