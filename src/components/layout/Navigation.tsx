@@ -29,31 +29,34 @@ export function Navigation() {
         style={{ backgroundColor: 'var(--atlas-white)' }}
       >
         <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
-          <div className="flex items-center justify-between h-16">
+          <div className="flex items-stretch justify-between h-16">
             {/* Logo mark */}
-            <Link href="/" aria-label="ATLAS — Home" className="flex items-center text-atlas-black">
+            <Link href="/" aria-label="ATLAS — Home" className="flex items-center self-center text-atlas-black">
               <AtlasMark className="h-10 w-10" interactive detail="minimal" />
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-stretch self-stretch gap-px" aria-label="Main navigation">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs font-mono uppercase tracking-widest transition-interactive px-3 py-1.5"
-                  style={{ color: 'var(--atlas-black)', outline: '1px solid transparent' }}
+                  className="text-xs font-mono uppercase tracking-widest transition-interactive px-4 flex items-center"
+                  style={{
+                    color: 'var(--atlas-black)',
+                    border: '1px solid transparent',
+                  }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
                     el.style.backgroundColor = 'var(--atlas-red)'
                     el.style.color = 'white'
-                    el.style.outline = '1px solid var(--atlas-red)'
+                    el.style.border = '1px solid var(--atlas-black)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
                     el.style.backgroundColor = 'transparent'
                     el.style.color = 'var(--atlas-black)'
-                    el.style.outline = '1px solid transparent'
+                    el.style.border = '1px solid transparent'
                   }}
                 >
                   {link.label}
@@ -65,7 +68,7 @@ export function Navigation() {
             <button
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
-              className="lg:hidden flex flex-col gap-[7px] p-2"
+              className="lg:hidden flex flex-col gap-[7px] p-2 self-center"
               onClick={() => setMobileOpen((v) => !v)}
             >
               <span
