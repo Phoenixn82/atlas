@@ -12,7 +12,11 @@ const preview = PORTFOLIO_PROJECTS.slice(0, 3)
 
 export function PortfolioPreview() {
   return (
-    <section className="py-40 max-lg:py-20 relative overflow-hidden">
+    <section className="relative py-40 max-lg:py-20 overflow-hidden">
+      {/* Striped logo — bg watermark */}
+      <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none" aria-hidden="true" style={{ opacity: 0.07 }}>
+        <Image src="/images/logos/atlas-striped.png" alt="" width={700} height={230} className="object-contain" quality={100} />
+      </div>
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
         <SectionReveal>
           <SectionMarker number="03" label="SELECTED WORK" className="mb-10" />

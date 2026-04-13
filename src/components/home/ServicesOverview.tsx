@@ -27,16 +27,8 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="relative py-40 max-lg:py-20 overflow-hidden">
-      {/* Vertical logo — right edge */}
-      <div
-        className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
-        aria-hidden="true"
-        style={{ opacity: 0.22 }}
-      >
-        <Image src="/images/logos/atlas-vertical.png" alt="" width={48} height={192} className="object-contain" quality={100} />
-      </div>
-      <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6">
+    <section className="py-40 max-lg:py-20">
+      <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
         <SectionReveal>
           <SectionMarker number="02" label="SERVICES" className="mb-10" />
           <HorizontalRule weight="hairline" animate className="mb-10" />

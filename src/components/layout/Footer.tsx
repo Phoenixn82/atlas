@@ -23,6 +23,16 @@ export function Footer() {
               width={180}
               height={72}
               className="object-contain object-left"
+              quality={100}
+            />
+            <Image
+              src="/images/logos/atlas-mesh.png"
+              alt=""
+              width={180}
+              height={56}
+              className="object-contain object-left opacity-30"
+              quality={100}
+              aria-hidden="true"
             />
             <p
               className="text-sm font-mono leading-relaxed max-w-xs"
@@ -100,22 +110,12 @@ export function Footer() {
       {/* Bottom bar */}
       <HorizontalRule weight="hairline" />
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-6 flex items-center justify-between">
-        <div className="flex items-center gap-6">
-          <Image
-            src="/images/logos/atlas-vertical.png"
-            alt=""
-            width={24}
-            height={96}
-            className="object-contain opacity-40"
-            aria-hidden="true"
-          />
-          <p
-            className="text-xs font-mono uppercase tracking-widest"
-            style={{ color: 'var(--atlas-gray-500)' }}
-          >
-            © {year} {SITE_NAME}. All rights reserved.
-          </p>
-        </div>
+        <p
+          className="text-xs font-mono uppercase tracking-widest"
+          style={{ color: 'var(--atlas-gray-500)' }}
+        >
+          © {year} {SITE_NAME}. All rights reserved.
+        </p>
         {/* Back to top */}
         <a
           href="#top"

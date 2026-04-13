@@ -22,17 +22,6 @@ export function HeroSection() {
           quality={100}
         />
       </div>
-      {/* Vertical logo — right edge accent */}
-      <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block" aria-hidden="true">
-        <Image
-          src="/images/logos/atlas-vertical.png"
-          alt=""
-          width={52}
-          height={210}
-          className="opacity-20 object-contain"
-          quality={100}
-        />
-      </div>
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 w-full">
         <div className="grid grid-cols-12 gap-8 items-center min-h-[calc(100vh-4rem)]">
 

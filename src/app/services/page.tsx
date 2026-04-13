@@ -26,27 +26,21 @@ export default function ServicesPage() {
             SERVICES
           </h1>
         </SectionReveal>
-        {/* Vertical logo — left edge */}
+        {/* Outline logo — left */}
         <div
-          className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
-          aria-hidden="true"
-          style={{ opacity: 0.28 }}
-        >
-          <Image src="/images/logos/atlas-vertical.png" alt="" width={48} height={192} className="object-contain" quality={100} />
-        </div>
-        {/* Dark logo — top-right watermark */}
-        <div
-          className="absolute right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+          className="absolute left-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
           aria-hidden="true"
           style={{ opacity: 0.3 }}
         >
-          <Image
-            src="/images/logos/atlas-dark.png"
-            alt=""
-            width={320}
-            height={100}
-            className="object-contain" quality={100}
-          />
+          <Image src="/images/logos/atlas-outline.png" alt="" width={320} height={100} className="object-contain" quality={100} />
+        </div>
+        {/* Dark logo — right */}
+        <div
+          className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+          aria-hidden="true"
+          style={{ opacity: 0.3 }}
+        >
+          <Image src="/images/logos/atlas-dark.png" alt="" width={320} height={100} className="object-contain" quality={100} />
         </div>
         <HorizontalRule weight="thick" animate className="mt-8" />
       </div>

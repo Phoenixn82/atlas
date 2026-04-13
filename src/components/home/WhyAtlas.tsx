@@ -8,28 +8,21 @@ import { WHY_ATLAS } from '@/lib/constants'
 export function WhyAtlas() {
   return (
     <section className="relative py-40 max-lg:py-20 overflow-hidden">
-      {/* Vertical logo — left edge */}
+      {/* Worm logo — right bg */}
       <div
-        className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[8%] pointer-events-none select-none hidden lg:block"
+        aria-hidden="true"
+        style={{ opacity: 0.3 }}
+      >
+        <Image src="/images/logos/atlas-worm.png" alt="" width={480} height={280} className="object-contain" quality={100} />
+      </div>
+      {/* Dark logo — left bg */}
+      <div
+        className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-[8%] pointer-events-none select-none hidden lg:block"
         aria-hidden="true"
         style={{ opacity: 0.25 }}
       >
-        <Image src="/images/logos/atlas-vertical.png" alt="" width={48} height={192} className="object-contain" quality={100} />
-      </div>
-
-      {/* Outline ghost watermark */}
-      <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[10%] pointer-events-none select-none"
-        aria-hidden="true"
-        style={{ opacity: 0.35 }}
-      >
-        <Image
-          src="/images/logos/atlas-outline.png"
-          alt=""
-          width={560}
-          height={180}
-          className="object-contain" quality={100}
-        />
+        <Image src="/images/logos/atlas-dark.png" alt="" width={360} height={110} className="object-contain" quality={100} />
       </div>
       <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6">
         <SectionReveal>

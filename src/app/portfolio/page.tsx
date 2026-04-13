@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionReveal } from '@/components/ui/SectionReveal'
@@ -13,7 +14,15 @@ export const metadata: Metadata = {
 export default function PortfolioPage() {
   return (
     <div className="pt-16">
-      <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-24">
+      <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6 py-24 overflow-hidden">
+        {/* Outline logo — right bg */}
+        <div
+          className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+          aria-hidden="true"
+          style={{ opacity: 0.3 }}
+        >
+          <Image src="/images/logos/atlas-outline.png" alt="" width={360} height={112} className="object-contain" quality={100} />
+        </div>
         <SectionReveal>
           <p
             className="text-xs font-mono uppercase tracking-widest mb-6"
