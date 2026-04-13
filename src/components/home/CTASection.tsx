@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Button } from '@/components/ui/Button'
@@ -13,9 +14,15 @@ export function CTASection() {
       <div className="py-40 max-lg:py-24">
         <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 text-center">
           <SectionReveal>
-            {/* Atlas badge centered above headline */}
+            {/* Worm logo centered above headline */}
             <div className="flex justify-center mb-12">
-              <AtlasMark detail="full" className="w-32 h-32" />
+              <Image
+                src="/images/logos/atlas-worm.png"
+                alt="ATLAS"
+                width={280}
+                height={160}
+                className="object-contain"
+              />
             </div>
             <h2
               className="font-bold uppercase tracking-tight leading-none mb-8"

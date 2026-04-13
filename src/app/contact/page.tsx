@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import type { Metadata } from 'next'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionReveal } from '@/components/ui/SectionReveal'
@@ -28,7 +29,7 @@ export default function ContactPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
-      <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-24">
+      <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6 py-24 overflow-hidden">
         <SectionReveal>
           <h1
             className="font-bold uppercase tracking-tight leading-none"
@@ -37,6 +38,20 @@ export default function ContactPage() {
             CONTACT
           </h1>
         </SectionReveal>
+        {/* Mesh logo — background texture */}
+        <div
+          className="absolute right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+          aria-hidden="true"
+          style={{ opacity: 0.15 }}
+        >
+          <Image
+            src="/images/logos/atlas-mesh.png"
+            alt=""
+            width={340}
+            height={110}
+            className="object-contain"
+          />
+        </div>
         <HorizontalRule weight="thick" animate className="mt-8 mb-20" />
 
         <div className="grid grid-cols-12 gap-16 max-lg:gap-20">

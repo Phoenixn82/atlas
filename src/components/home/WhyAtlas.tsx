@@ -1,4 +1,4 @@
-import { AtlasMark } from '@/components/atlas/AtlasMark'
+import Image from 'next/image'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionMarker } from '@/components/ui/SectionMarker'
 import { SectionReveal } from '@/components/ui/SectionReveal'
@@ -7,13 +7,19 @@ import { WHY_ATLAS } from '@/lib/constants'
 export function WhyAtlas() {
   return (
     <section className="relative py-40 max-lg:py-20 overflow-hidden">
-      {/* Ghost watermark badge */}
+      {/* Outline ghost watermark */}
       <div
-        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/3 pointer-events-none select-none"
+        className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-[10%] pointer-events-none select-none"
         aria-hidden="true"
-        style={{ opacity: 0.04 }}
+        style={{ opacity: 0.18 }}
       >
-        <AtlasMark detail="full" className="w-[480px] h-[480px]" />
+        <Image
+          src="/images/logos/atlas-outline.png"
+          alt=""
+          width={560}
+          height={180}
+          className="object-contain"
+        />
       </div>
       <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6">
         <SectionReveal>

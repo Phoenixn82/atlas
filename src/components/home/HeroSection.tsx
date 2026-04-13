@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { AtlasFigure } from '@/components/atlas/AtlasFigure'
 import { AtlasMark } from '@/components/atlas/AtlasMark'
@@ -11,6 +12,16 @@ import { fadeUpVariants, staggerContainerVariants, EASE_ATLAS } from '@/lib/anim
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
+      {/* Striped logo — large background watermark */}
+      <div className="absolute inset-0 flex items-center justify-start pl-16 pointer-events-none select-none" aria-hidden="true">
+        <Image
+          src="/images/logos/atlas-striped.png"
+          alt=""
+          width={600}
+          height={200}
+          className="opacity-[0.06] object-contain"
+        />
+      </div>
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 w-full">
         <div className="grid grid-cols-12 gap-8 items-center min-h-[calc(100vh-4rem)]">
 

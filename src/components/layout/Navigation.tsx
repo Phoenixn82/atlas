@@ -2,8 +2,8 @@
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
+import Image from 'next/image'
 import { motion, AnimatePresence } from 'framer-motion'
-import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { NAV_LINKS } from '@/lib/constants'
 import { clipRevealVariants } from '@/lib/animations'
 
@@ -31,8 +31,15 @@ export function Navigation() {
         <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
           <div className="flex items-stretch justify-between h-16">
             {/* Logo mark */}
-            <Link href="/" aria-label="ATLAS — Home" className="flex items-center self-center text-atlas-black">
-              <AtlasMark className="h-10 w-10" interactive detail="minimal" />
+            <Link href="/" aria-label="ATLAS — Home" className="flex items-center self-center">
+              <Image
+                src="/images/logos/atlas-circle.png"
+                alt="ATLAS"
+                width={44}
+                height={44}
+                className="is-circle"
+                priority
+              />
             </Link>
 
             {/* Desktop nav */}
