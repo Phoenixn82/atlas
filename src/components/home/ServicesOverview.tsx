@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Card } from '@/components/ui/Card'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionMarker } from '@/components/ui/SectionMarker'
@@ -44,11 +45,12 @@ export function ServicesOverview() {
               DO BEST
             </h2>
           </SectionReveal>
-          <SectionReveal className="col-span-12 lg:col-span-5 lg:col-start-7 flex items-end">
-            <p className="text-base font-mono leading-relaxed" style={{ color: 'var(--atlas-gray-500)' }}>
+          <SectionReveal className="col-span-12 lg:col-span-5 lg:col-start-7 flex items-end gap-6">
+            <p className="text-base font-mono leading-relaxed flex-1" style={{ color: 'var(--atlas-gray-500)' }}>
               Every engagement is built around one question: what will move the needle for your
               business?
             </p>
+            <AtlasMark detail="standard" className="w-14 h-14 shrink-0 opacity-60 hidden lg:block" />
           </SectionReveal>
         </div>
 

@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion'
 import { AtlasFigure } from '@/components/atlas/AtlasFigure'
+import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Button } from '@/components/ui/Button'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionMarker } from '@/components/ui/SectionMarker'
@@ -61,6 +62,22 @@ export function HeroSection() {
             <motion.div className="flex flex-wrap gap-4" variants={fadeUpVariants}>
               <Button href="/contact">BOOK YOUR FREE STRATEGY CALL</Button>
               <Button variant="ghost" href="/services">VIEW SERVICES</Button>
+            </motion.div>
+
+            {/* Mission badge seal */}
+            <motion.div
+              className="mt-16 flex items-center gap-6"
+              variants={fadeUpVariants}
+            >
+              <AtlasMark detail="full" className="w-24 h-24 opacity-70" />
+              <div>
+                <p className="text-xs font-mono uppercase tracking-widest" style={{ color: 'var(--atlas-gray-500)' }}>
+                  ATLAS AGENCY
+                </p>
+                <p className="text-xs font-mono mt-1" style={{ color: 'var(--atlas-gray-300)' }}>
+                  WEB DESIGN · SEO · RESULTS
+                </p>
+              </div>
             </motion.div>
           </motion.div>
 

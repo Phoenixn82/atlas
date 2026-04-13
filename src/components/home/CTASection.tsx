@@ -1,6 +1,7 @@
 'use client'
 
 import Link from 'next/link'
+import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Button } from '@/components/ui/Button'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionReveal } from '@/components/ui/SectionReveal'
@@ -12,6 +13,10 @@ export function CTASection() {
       <div className="py-40 max-lg:py-24">
         <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 text-center">
           <SectionReveal>
+            {/* Atlas badge centered above headline */}
+            <div className="flex justify-center mb-12">
+              <AtlasMark detail="full" className="w-32 h-32" />
+            </div>
             <h2
               className="font-bold uppercase tracking-tight leading-none mb-8"
               style={{ fontSize: 'clamp(2.5rem, 6vw, 6rem)', color: 'var(--atlas-black)' }}

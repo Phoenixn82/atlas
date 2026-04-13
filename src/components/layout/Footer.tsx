@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { AtlasFigure } from '@/components/atlas/AtlasFigure'
+import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { NAV_LINKS, SITE_NAME } from '@/lib/constants'
 
@@ -13,23 +14,26 @@ export function Footer() {
       <HorizontalRule weight="heavy" />
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-20">
         <div className="grid grid-cols-12 gap-8">
-          {/* Column 1: Brand + Atlas figure */}
+          {/* Column 1: Brand + Atlas mark */}
           <div className="col-span-12 lg:col-span-4 flex flex-col gap-8">
-            <div>
-              <p
-                className="text-2xl font-mono font-bold uppercase tracking-tight"
-                style={{ color: 'var(--atlas-black)' }}
-              >
-                ATLAS
-              </p>
-              <p
-                className="mt-3 text-sm font-mono leading-relaxed max-w-xs"
-                style={{ color: 'var(--atlas-gray-500)' }}
-              >
-                We carry the weight of your digital presence so you can focus on your business.
-              </p>
+            <div className="flex items-start gap-5">
+              <AtlasMark detail="standard" className="w-16 h-16 shrink-0 mt-1" />
+              <div>
+                <p
+                  className="text-2xl font-mono font-bold uppercase tracking-tight"
+                  style={{ color: 'var(--atlas-black)' }}
+                >
+                  ATLAS
+                </p>
+                <p
+                  className="mt-3 text-sm font-mono leading-relaxed max-w-xs"
+                  style={{ color: 'var(--atlas-gray-500)' }}
+                >
+                  We carry the weight of your digital presence so you can focus on your business.
+                </p>
+              </div>
             </div>
-            <div className="flex justify-start opacity-20">
+            <div className="flex justify-start opacity-15">
               <AtlasFigure variant="silhouette" size="sm" />
             </div>
           </div>

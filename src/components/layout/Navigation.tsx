@@ -32,7 +32,7 @@ export function Navigation() {
           <div className="flex items-center justify-between h-16">
             {/* Logo mark */}
             <Link href="/" aria-label="ATLAS — Home" className="flex items-center text-atlas-black">
-              <AtlasMark className="h-10 w-10" interactive />
+              <AtlasMark className="h-10 w-10" interactive detail="minimal" />
             </Link>
 
             {/* Desktop nav */}
