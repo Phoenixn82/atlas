@@ -44,19 +44,19 @@ export function Navigation() {
                   className="text-xs font-mono uppercase tracking-widest transition-interactive px-4 flex items-center"
                   style={{
                     color: 'var(--atlas-black)',
-                    border: '1px solid transparent',
+                    border: '2px solid transparent',
                   }}
                   onMouseEnter={e => {
                     const el = e.currentTarget as HTMLElement
                     el.style.backgroundColor = 'var(--atlas-red)'
                     el.style.color = 'white'
-                    el.style.border = '1px solid var(--atlas-black)'
+                    el.style.border = '2px solid var(--atlas-black)'
                   }}
                   onMouseLeave={e => {
                     const el = e.currentTarget as HTMLElement
                     el.style.backgroundColor = 'transparent'
                     el.style.color = 'var(--atlas-black)'
-                    el.style.border = '1px solid transparent'
+                    el.style.border = '2px solid transparent'
                   }}
                 >
                   {link.label}
@@ -84,7 +84,7 @@ export function Navigation() {
         </div>
 
         {/* Bottom hairline rule */}
-        <div className="h-[1px]" style={{ backgroundColor: 'var(--atlas-black)' }} />
+        <div className="h-[2px]" style={{ backgroundColor: 'var(--atlas-black)' }} />
       </header>
 
       {/* Mobile overlay */}
