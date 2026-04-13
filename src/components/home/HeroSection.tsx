@@ -11,6 +11,10 @@ import { fadeUpVariants, staggerContainerVariants, EASE_ATLAS } from '@/lib/anim
 export function HeroSection() {
   return (
     <section className="relative min-h-screen flex flex-col justify-center overflow-hidden pt-16">
+      {/* Vertical logo — right edge */}
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block" aria-hidden="true" style={{ opacity: 0.25 }}>
+        <Image src="/images/logos/atlas-vertical.png" alt="" width={52} height={210} className="object-contain" quality={100} />
+      </div>
       {/* Striped logo — large background watermark */}
       <div className="absolute inset-0 flex items-center justify-start pl-16 pointer-events-none select-none" aria-hidden="true">
         <Image
@@ -75,27 +79,6 @@ export function HeroSection() {
               <Button variant="ghost" href="/services">VIEW SERVICES</Button>
             </motion.div>
 
-            {/* Circle badge seal */}
-            <motion.div
-              className="mt-16 flex items-center gap-6"
-              variants={fadeUpVariants}
-            >
-              <Image
-                src="/images/logos/atlas-circle.png"
-                alt="ATLAS"
-                width={88}
-                height={88}
-                className="is-circle"
-              />
-              <div>
-                <p className="text-xs font-mono uppercase tracking-widest" style={{ color: 'var(--atlas-gray-500)' }}>
-                  ATLAS AGENCY
-                </p>
-                <p className="text-xs font-mono mt-1" style={{ color: 'var(--atlas-gray-300)' }}>
-                  WEB DESIGN · SEO · RESULTS
-                </p>
-              </div>
-            </motion.div>
           </motion.div>
 
           {/* Right: Atlas figure */}
