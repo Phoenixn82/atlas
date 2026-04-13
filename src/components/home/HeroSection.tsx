@@ -3,7 +3,6 @@
 import Image from 'next/image'
 import { motion } from 'framer-motion'
 import { AtlasFigure } from '@/components/atlas/AtlasFigure'
-import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Button } from '@/components/ui/Button'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionMarker } from '@/components/ui/SectionMarker'
@@ -19,7 +18,19 @@ export function HeroSection() {
           alt=""
           width={600}
           height={200}
-          className="opacity-[0.06] object-contain"
+          className="opacity-20 object-contain"
+          quality={100}
+        />
+      </div>
+      {/* Vertical logo — right edge accent */}
+      <div className="absolute right-8 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block" aria-hidden="true">
+        <Image
+          src="/images/logos/atlas-vertical.png"
+          alt=""
+          width={52}
+          height={210}
+          className="opacity-20 object-contain"
+          quality={100}
         />
       </div>
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 w-full">
@@ -75,12 +86,18 @@ export function HeroSection() {
               <Button variant="ghost" href="/services">VIEW SERVICES</Button>
             </motion.div>
 
-            {/* Mission badge seal */}
+            {/* Circle badge seal */}
             <motion.div
               className="mt-16 flex items-center gap-6"
               variants={fadeUpVariants}
             >
-              <AtlasMark detail="full" className="w-24 h-24 opacity-70" />
+              <Image
+                src="/images/logos/atlas-circle.png"
+                alt="ATLAS"
+                width={88}
+                height={88}
+                className="is-circle"
+              />
               <div>
                 <p className="text-xs font-mono uppercase tracking-widest" style={{ color: 'var(--atlas-gray-500)' }}>
                   ATLAS AGENCY

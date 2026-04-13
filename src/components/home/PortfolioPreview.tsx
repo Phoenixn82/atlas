@@ -85,14 +85,14 @@ export function PortfolioPreview() {
         <div
           className="absolute left-0 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
           aria-hidden="true"
-          style={{ opacity: 0.07 }}
+          style={{ opacity: 0.28 }}
         >
           <Image
             src="/images/logos/atlas-vertical.png"
             alt=""
             width={60}
             height={240}
-            className="object-contain"
+            className="object-contain" quality={100}
           />
         </div>
 

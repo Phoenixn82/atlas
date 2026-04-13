@@ -100,12 +100,22 @@ export function Footer() {
       {/* Bottom bar */}
       <HorizontalRule weight="hairline" />
       <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6 py-6 flex items-center justify-between">
-        <p
-          className="text-xs font-mono uppercase tracking-widest"
-          style={{ color: 'var(--atlas-gray-500)' }}
-        >
-          © {year} {SITE_NAME}. All rights reserved.
-        </p>
+        <div className="flex items-center gap-6">
+          <Image
+            src="/images/logos/atlas-vertical.png"
+            alt=""
+            width={24}
+            height={96}
+            className="object-contain opacity-40"
+            aria-hidden="true"
+          />
+          <p
+            className="text-xs font-mono uppercase tracking-widest"
+            style={{ color: 'var(--atlas-gray-500)' }}
+          >
+            © {year} {SITE_NAME}. All rights reserved.
+          </p>
+        </div>
         {/* Back to top */}
         <a
           href="#top"

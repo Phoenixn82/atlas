@@ -1,7 +1,7 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
-import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Card } from '@/components/ui/Card'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionMarker } from '@/components/ui/SectionMarker'
@@ -27,8 +27,16 @@ const services = [
 
 export function ServicesOverview() {
   return (
-    <section className="py-40 max-lg:py-20">
-      <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
+    <section className="relative py-40 max-lg:py-20 overflow-hidden">
+      {/* Vertical logo — right edge */}
+      <div
+        className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+        aria-hidden="true"
+        style={{ opacity: 0.22 }}
+      >
+        <Image src="/images/logos/atlas-vertical.png" alt="" width={48} height={192} className="object-contain" quality={100} />
+      </div>
+      <div className="relative max-w-[1440px] mx-auto px-16 max-lg:px-6">
         <SectionReveal>
           <SectionMarker number="02" label="SERVICES" className="mb-10" />
           <HorizontalRule weight="hairline" animate className="mb-10" />
@@ -50,7 +58,13 @@ export function ServicesOverview() {
               Every engagement is built around one question: what will move the needle for your
               business?
             </p>
-            <AtlasMark detail="standard" className="w-14 h-14 shrink-0 opacity-60 hidden lg:block" />
+            <Image
+              src="/images/logos/atlas-circle.png"
+              alt="ATLAS"
+              width={56}
+              height={56}
+              className="is-circle shrink-0 hidden lg:block"
+            />
           </SectionReveal>
         </div>
 

@@ -38,18 +38,26 @@ export default function ContactPage() {
             CONTACT
           </h1>
         </SectionReveal>
+        {/* Vertical logo — left edge */}
+        <div
+          className="absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
+          aria-hidden="true"
+          style={{ opacity: 0.28 }}
+        >
+          <Image src="/images/logos/atlas-vertical.png" alt="" width={48} height={192} className="object-contain" quality={100} />
+        </div>
         {/* Mesh logo — background texture */}
         <div
           className="absolute right-16 top-1/2 -translate-y-1/2 pointer-events-none select-none hidden lg:block"
           aria-hidden="true"
-          style={{ opacity: 0.15 }}
+          style={{ opacity: 0.3 }}
         >
           <Image
             src="/images/logos/atlas-mesh.png"
             alt=""
             width={340}
             height={110}
-            className="object-contain"
+            className="object-contain" quality={100}
           />
         </div>
         <HorizontalRule weight="thick" animate className="mt-8 mb-20" />

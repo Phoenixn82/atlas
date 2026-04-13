@@ -31,13 +31,23 @@ export function Navigation() {
         <div className="max-w-[1440px] mx-auto px-16 max-lg:px-6">
           <div className="flex items-stretch justify-between h-16">
             {/* Logo mark */}
-            <Link href="/" aria-label="ATLAS — Home" className="flex items-center self-center">
+            <Link href="/" aria-label="ATLAS — Home" className="flex items-center self-center gap-3">
               <Image
                 src="/images/logos/atlas-circle.png"
                 alt="ATLAS"
                 width={44}
                 height={44}
                 className="is-circle"
+                quality={100}
+                priority
+              />
+              <Image
+                src="/images/logos/atlas-boxed.png"
+                alt="ATLAS"
+                width={120}
+                height={44}
+                className="object-contain hidden sm:block"
+                quality={100}
                 priority
               />
             </Link>

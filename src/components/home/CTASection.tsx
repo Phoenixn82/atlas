@@ -2,7 +2,6 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { AtlasMark } from '@/components/atlas/AtlasMark'
 import { Button } from '@/components/ui/Button'
 import { HorizontalRule } from '@/components/ui/HorizontalRule'
 import { SectionReveal } from '@/components/ui/SectionReveal'
@@ -21,7 +20,7 @@ export function CTASection() {
                 alt="ATLAS"
                 width={280}
                 height={160}
-                className="object-contain"
+                className="object-contain" quality={100}
               />
             </div>
             <h2
