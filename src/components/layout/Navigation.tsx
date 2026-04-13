@@ -32,19 +32,29 @@ export function Navigation() {
           <div className="flex items-center justify-between h-16">
             {/* Logo mark */}
             <Link href="/" aria-label="ATLAS — Home" className="flex items-center text-atlas-black">
-              <AtlasMark className="h-9 w-auto" interactive />
+              <AtlasMark className="h-10 w-10" interactive />
             </Link>
 
             {/* Desktop nav */}
-            <nav className="hidden lg:flex items-center gap-10" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-center gap-2" aria-label="Main navigation">
               {NAV_LINKS.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-xs font-mono uppercase tracking-widest relative group transition-interactive"
-                  style={{ color: 'var(--atlas-black)' }}
-                  onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--atlas-red)' }}
-                  onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--atlas-black)' }}
+                  className="text-xs font-mono uppercase tracking-widest transition-interactive px-3 py-1.5"
+                  style={{ color: 'var(--atlas-black)', outline: '1px solid transparent' }}
+                  onMouseEnter={e => {
+                    const el = e.currentTarget as HTMLElement
+                    el.style.backgroundColor = 'var(--atlas-red)'
+                    el.style.color = 'white'
+                    el.style.outline = '1px solid var(--atlas-red)'
+                  }}
+                  onMouseLeave={e => {
+                    const el = e.currentTarget as HTMLElement
+                    el.style.backgroundColor = 'transparent'
+                    el.style.color = 'var(--atlas-black)'
+                    el.style.outline = '1px solid transparent'
+                  }}
                 >
                   {link.label}
                 </Link>
@@ -95,10 +105,18 @@ export function Navigation() {
                 >
                   <Link
                     href={link.href}
-                    className="text-5xl font-mono font-bold uppercase tracking-tight transition-interactive"
+                    className="text-5xl font-mono font-bold uppercase tracking-tight transition-interactive inline-block px-4 py-1"
                     style={{ color: 'var(--atlas-black)' }}
-                    onMouseEnter={e => { (e.currentTarget as HTMLElement).style.color = 'var(--atlas-red)' }}
-                    onMouseLeave={e => { (e.currentTarget as HTMLElement).style.color = 'var(--atlas-black)' }}
+                    onMouseEnter={e => {
+                      const el = e.currentTarget as HTMLElement
+                      el.style.backgroundColor = 'var(--atlas-red)'
+                      el.style.color = 'white'
+                    }}
+                    onMouseLeave={e => {
+                      const el = e.currentTarget as HTMLElement
+                      el.style.backgroundColor = 'transparent'
+                      el.style.color = 'var(--atlas-black)'
+                    }}
                     onClick={() => setMobileOpen(false)}
                   >
                     {link.label}
